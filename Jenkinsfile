@@ -8,7 +8,7 @@ node {
     }
     stage('My do nothing stage') {
         sh 'whoami'       
-        sh 'ip a'
+        sh 'ip a | grep 172'
         sh 'uname -a'
     }
     stage('Build image') {
@@ -16,7 +16,7 @@ node {
          /* docker build on the command line */
         sh 'docker --version'
         sh 'docker ps'
-//        app = docker.build("getintodevops/hellonode")
+        app = docker.build("getintodevops/hellonode")
     }
 
     stage('Test image') {
