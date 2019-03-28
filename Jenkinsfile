@@ -7,7 +7,7 @@ node {
         checkout scm
     }
     stage('My do nothing stage') {
-       
+        sh 'whoami'       
     }
     stage('Build image') {
         /* This builds the actual image; synonymous to
