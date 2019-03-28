@@ -6,7 +6,7 @@ node {
 
         checkout scm
     }
-    stage('My do nother stage') {
+    stage('My do nothing stage') {
        
     }
     stage('Build image') {
