@@ -12,9 +12,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh 'ip a'
-        sh 'uname -a'
-	sh 'docker version'
+        sh 'ip a; uname -a; docker version'
 //        app = docker.build("getintodevops/hellonode")
     }
 
