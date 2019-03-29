@@ -8,8 +8,6 @@ node {
     }
     stage('My do nothing stage') {
         sh 'whoami'       
-        sh 'ip a | grep 172'
-        sh 'uname -a'
     }
     stage('Build image') {
         /* This builds the actual image; synonymous to
@@ -28,6 +26,10 @@ node {
         }
     }
 
+    stage('Another do nothing stage') {
+        sh 'whoami'
+    }
+       
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
