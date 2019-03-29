@@ -14,7 +14,7 @@ node {
          /* docker build on the command line */
         sh 'docker --version'
         sh 'docker ps'
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("devops")
     }
 
     stage('Test image') {
