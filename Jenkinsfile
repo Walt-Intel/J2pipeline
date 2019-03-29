@@ -14,7 +14,7 @@ node {
          /* docker build on the command line */
         sh 'docker --version'
         sh 'docker ps'
-        app = docker.build("devops")
+        app = docker.build("/repository/registry-1.docker.io/wam1066/devops")
     }
 
     stage('Test image') {
